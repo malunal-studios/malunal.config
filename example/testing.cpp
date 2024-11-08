@@ -1,8 +1,8 @@
 #include <iostream>
-#include <simular/config.hpp>
+#include <malunal/config.hpp>
 
 int
 main() {
-    std::cout << "Platform " << SIMULAR_PLATFORM_DESC   << std::endl;
-    std::cout << "Compiler " << SIMULAR_COMPILER_STRING << std::endl;
+    std::cout << "Platform " << MALUNAL_PLATFORM_DESC   << std::endl;
+    std::cout << "Compiler " << MALUNAL_COMPILER_STRING << std::endl;
 }

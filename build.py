@@ -70,7 +70,7 @@ if (clargs.configure == True):
 
     cmake_options.append(f"-DCMAKE_BUILD_TYPE={build_type}")
     if (clargs.example == True):
-        cmake_options.append(f"-DSIMULAR_CONFIG_BUILD_EXAMPLE=ON")
+        cmake_options.append(f"-DMALUNAL_CONFIG_BUILD_EXAMPLE=ON")
 
     arguments.extend(cmake_options)
     arguments.extend(["-S", ".", "-B", "build"])

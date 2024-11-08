@@ -1,8 +1,8 @@
 /// @file common.hpp
 /// @brief Defines common properties of compiler related configurations.
 /// @author John Christman <sorakatadzuma@gmail.com>
-/// @copyright 2024 Simular Technologies, LLC.
-#if !defined(SIMULAR_CONFIG_HPP)
+/// @copyright 2024 Malunal Studios, LLC.
+#if !defined(MALUNAL_CONFIG_HPP)
 #  error This file should not be included standalone!
 #endif // Inclusion check.
 

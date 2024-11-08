@@ -1,18 +1,18 @@
 /// @file linux.hpp
 /// @brief Contains the configurations for linux based platforms.
 /// @author John Christman <sorakatadzuma@gmail.com>
-/// @copyright 2024 Simular Technologies, LLC.
+/// @copyright 2024 Malunal Studios, LLC.
 #include "common.hpp"
 
 // Generic macros.
-#define SIMULAR_PLATFORM_UNIX 1
-#define SIMULAR_PLATFORM_POSIX 1
-#define SIMULAR_PLATFORM_LINUX 1
-#define SIMULAR_PLATFORM_WIN32 0
-#define SIMULAR_PLATFORM_DESKTOP 1
-#define SIMULAR_PLATFORM_NAME "linux"
-#define SIMULAR_PLATFORM_DESC \
-    SIMULAR_PROCESSOR_NAME "-" SIMULAR_PLATFORM_NAME
+#define MALUNAL_PLATFORM_UNIX 1
+#define MALUNAL_PLATFORM_POSIX 1
+#define MALUNAL_PLATFORM_LINUX 1
+#define MALUNAL_PLATFORM_WIN32 0
+#define MALUNAL_PLATFORM_DESKTOP 1
+#define MALUNAL_PLATFORM_NAME "linux"
+#define MALUNAL_PLATFORM_DESC \
+    MALUNAL_PROCESSOR_NAME "-" MALUNAL_PLATFORM_NAME
 
 
 // if the compiler is not gcc we still need to be able to parse
