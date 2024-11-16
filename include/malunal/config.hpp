@@ -5,6 +5,7 @@
 /// @copyright 2024 Malunal Studios, LLC.
 #ifndef MALUNAL_CONFIG_HPP
 #define MALUNAL_CONFIG_HPP
+#include <malunal/config/stdafx.hpp>
 
 // Check for compiler config.
 #if !defined(MALUNAL_COMPILER_CONFIG)    && \
