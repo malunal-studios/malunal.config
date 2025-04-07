@@ -1,7 +1,7 @@
 /// @file linux.hpp
 /// @brief Contains the configurations for linux based platforms.
 /// @author John Christman <sorakatadzuma@gmail.com>
-/// @copyright 2024 Malunal Studios, LLC.
+/// @copyright 2024-2025 Malunal Studios, LLC.
 #include "common.hpp"
 
 // Generic macros.

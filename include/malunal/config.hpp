@@ -2,7 +2,7 @@
 /// @brief Includes headers which configure a project based on compiler,
 ///        processor, and platform.
 /// @author John Christman <sorakatadzuma@gmail.com>
-/// @copyright 2024 Malunal Studios, LLC.
+/// @copyright 2024-2025 Malunal Studios, LLC.
 #ifndef MALUNAL_CONFIG_HPP
 #define MALUNAL_CONFIG_HPP
 #include <malunal/config/stdafx.hpp>

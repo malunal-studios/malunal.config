@@ -2,7 +2,7 @@
 /// @brief Selects a platform specific header based on defined macros of that
 ///        platform, which includes settings for that platform.
 /// @author John Christman <sorakatadzuma@gmail.com>
-/// @copyright 2024 Malunal Studios, LLC.
+/// @copyright 2024-2025 Malunal Studios, LLC.
 #if defined(linux)     || \
     defined(__linux)   || \
     defined(__linux__) || \

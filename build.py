@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!python3
 import argparse
 import os
 import subprocess
@@ -25,16 +25,6 @@ parser.add_argument(
 )
 
 parser.add_argument(
-    "-i",
-    "--install",
-    default=False,
-    action="store_true",
-    dest="install",
-    required=False,
-    help="Tells CMake to install the project to the user's system."
-)
-
-parser.add_argument(
     "-t",
     "--threads",
     default=1,
@@ -47,12 +37,12 @@ parser.add_argument(
 )
 
 parser.add_argument(
-    "--include-example",
+    "--include-examples",
     default=False,
     action="store_true",
-    dest="example",
+    dest="examples",
     required=False,
-    help="Configures the build to include the example."
+    help="Configures the build to include the examples."
 )
 
 clargs = parser.parse_args()
@@ -62,15 +52,15 @@ if (clargs.configure == True):
     build_type: str = "Debug"
     cmake_options: [str] = [
         "cmake", "-E", "env", "CLICOLOR_FORCE=1",
-        "cmake", "-G", "\"Unix Makefiles\""
+        "cmake", "-G", "\"Ninja\""
     ];
     
     if (clargs.release == True):
         build_type = "Release"
 
     cmake_options.append(f"-DCMAKE_BUILD_TYPE={build_type}")
-    if (clargs.example == True):
-        cmake_options.append(f"-DMALUNAL_CONFIG_BUILD_EXAMPLE=ON")
+    if (clargs.examples == True):
+        cmake_options.append(f"-DMALUNAL_CONFIG_BUILD_EXAMPLES=ON")
 
     arguments.extend(cmake_options)
     arguments.extend(["-S", ".", "-B", "build"])

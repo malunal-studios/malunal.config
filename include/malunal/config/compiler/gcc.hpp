@@ -1,7 +1,7 @@
 /// @file gcc.hpp
 /// @brief Defines configurations for the compiler being used.
 /// @author John Christman <sorakatadzuma@gmail.com>
-/// @copyright 2024 Malunal Studios, LLC.
+/// @copyright 2024-2025 Malunal Studios, LLC.
 #include "common.hpp"
 
 // Define a comprehensible and consistent compiler version.

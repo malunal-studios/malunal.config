@@ -1,4 +1,3 @@
-#include <iostream>
 #include <malunal/config.hpp>
 
 int

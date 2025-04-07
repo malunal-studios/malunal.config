@@ -1,15 +1,20 @@
 /// @file stdafx.hpp
 /// @brief Contains the headers to precompile, if possible.
 /// @author John Christman sorakatadzuma@gmail.com
-/// @copyright 2024 Malunal Studios, LLC.
+/// @copyright 2024-2025 Malunal Studios, LLC.
 #pragma once
 #include <algorithm>
 #include <array>
 #include <concepts>
+#include <cassert>
+#include <cmath>
 #include <cstdint>
+#include <cstring>
 #include <expected>
 #include <fstream>
 #include <functional>
+#include <iostream>
+#include <list>
 #include <map>
 #include <memory>
 #include <memory_resource>
@@ -18,6 +23,7 @@
 #include <set>
 #include <span>
 #include <sstream>
+#include <stack>
 #include <string>
 #include <string_view>
 #include <unordered_map>
@@ -42,6 +48,7 @@ using std::uint64_t;
 using std::size_t;
 using std::ptrdiff_t;
 
+
 /// @brief   Alias consistent with other commonly used typedefs.
 /// @details The name for this is chosen because it also more closely aligns
 ///          with the naming of the other type definitions, in comparison to
@@ -65,7 +72,7 @@ using errcat_t = std::error_category;
 /// @brief   C-style raw pointer alias.
 /// @details Added for more consistency when working with interchangeable
 ///          pointers types like: `std::unique_ptr` and `std::shared_ptr`.
-using crptr_t = void*;
+using rawptr_t = void*;
 
 /// @brief   Standard library mutex alias.
 /// @details Used sometimes, matches the style of the other aliases.
@@ -82,7 +89,7 @@ using cstring_t = char*;
 
 /// @brief   Standard library string alias.
 /// @details Commonly used, matches the style of the other aliases.
-using string_t = std::string;
+using string_t = std::pmr::string;
 
 /// @brief   Standard library string view alias.
 /// @details Commonly used, matches the style of the other aliases.
@@ -109,6 +116,12 @@ using array_t = std::array<TValue, KSize>;
 /// @tparam  TValue The type of the value expected to be the result.
 template<typename TValue>
 using result_t = std::expected<TValue, error_t>;
+
+/// @brief   Standard library function alias.
+/// @details Used commonly, matches the style of the other aliases.
+/// @tparam  TFunc The function declaration type.
+template<typename TFunc>
+using func_t = std::function<TFunc>;
 
 /// @brief   Standard library map alias.
 /// @details Used rarely, matches the style of the other aliases. Name was
@@ -180,11 +193,23 @@ using set_t = std::pmr::unordered_set<TValue>;
 template<typename TContainer, size_t KExtent = std::dynamic_extent>
 using span_t = std::span<TContainer, KExtent>;
 
+/// @brief   Standard library list alias.
+/// @details Used rarely, matches the style of the other aliases.
+/// @tparam  TValue The type of vlaue being stored.
+template<typename TValue>
+using list_t = std::pmr::list<TValue>;
+
 /// @brief   Standard library vector alias.
 /// @details Commonly used, matches the style of the other aliases.
 /// @tparam  TValue The type of value being stored.
 template<typename TValue>
 using vec_t = std::pmr::vector<TValue>;
+
+/// @brief   Standard library stack alias.
+/// @details Used rarely, matches the style of the other aliases.
+/// @tparam  TValue The type of value being stored. 
+template<typename TValue>
+using stack_t = std::stack<TValue, vec_t<TValue>>;
 
 /// @brief   Standard library pair alias.
 /// @details Used rarely, matches the style of the other aliases.

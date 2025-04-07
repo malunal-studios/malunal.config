@@ -3,7 +3,7 @@
 ///        compiler, which includes settings for that compiler based on the
 ///        version of that compiler.
 /// @author John Christman <sorakatadzuma@gmail.com>
-/// @copyright 2024 Malunal Studios, LLC.
+/// @copyright 2024-2025 Malunal Studios, LLC.
 
 // TODO(John): Handle other common compilers.
 #if defined(__clang__)
